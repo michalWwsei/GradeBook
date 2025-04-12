@@ -26,6 +26,11 @@ namespace GradeBook.GradeBooks
 
         }
 
+        public BaseGradeBook(string name)
+        {
+            Name = name;
+        }
+
         public void AddStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Name))

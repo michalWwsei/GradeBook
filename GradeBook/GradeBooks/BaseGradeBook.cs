@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Linq;
-
 using GradeBook.Enums;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using GradeBooks.Enums;
+
 
 
 namespace GradeBook.GradeBooks
@@ -15,13 +14,15 @@ namespace GradeBook.GradeBooks
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+        public GradeBookType Type { get; set; }
 
 
-        public BaseGradeBook(string name)
+        public BaseGradeBook(string name, GradeBookType type)
         {
 
             Name = name;
             Students = new List<Student>();
+            Type = type;
 
         }
 

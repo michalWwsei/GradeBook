@@ -1,22 +1,10 @@
-﻿namespace GradeBooks.Enums
+﻿namespace GradeBook.Enums
 {
-    public enum GradeBookType
+    public enum EnrollmentType
     {
-        Standard,
-        Ranked,
-        ESNU,
-        OneToFour,
-        SixPoint
-    }
-    public class BaseGradeBook
-    {
-        
-        public GradeBookType Type { get; set; }
-
-        public BaseGradeBook(GradeBookType type)
-        {
-            Type = type;
-        }
-
+        Campus,
+        State,
+        National,
+        International
     }
 }

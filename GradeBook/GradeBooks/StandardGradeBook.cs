@@ -6,19 +6,14 @@ namespace GradeBook.GradeBooks
 {
     public class StandardGradeBook : BaseGradeBook
     {
-        public StandardGradeBook(string name) : base(name, GradeBookType.Standard)
-        {
-            
-        }
-
+        public StandardGradeBook(string name, bool isWeighted) : base(name, GradeBookType.Standard, isWeighted)
+        { }
     }
 
     public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) : base(name, GradeBookType.Ranked)
-        {
-        
-        }
+        public RankedGradeBook(string name, bool isWeighted) : base(name, GradeBookType.Ranked, isWeighted)
+        { }
 
         public override char GetLetterGrade(double averageGrade)
         {

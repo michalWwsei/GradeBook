@@ -142,13 +142,25 @@ namespace GradeBook.GradeBooks
                     break;
             }
 
-            if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+            if (IsWeighted)
             {
-                gpa += 1;
+                if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+                {
+                    gpa += 1;
+                }
+            }
+            else
+            {
+                if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+                {
+                    gpa = Math.Min(gpa + 1, 4);
+                }
+
+
             }
 
-        
-            return Math.Min(gpa, 4);
+
+            return gpa;
         }
 
         public virtual void CalculateStatistics()
